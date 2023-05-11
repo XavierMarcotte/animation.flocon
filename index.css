@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    max-height: 100vh;
+    background: black;
+}
+.bubble {
+    position: absolute;
+    border-radius: 300px;
+    background: #fff;
+    opacity: 0;
+    animation: anim 10s forwards;
+    /* filter: hue-rotate(0deg); */
+    /* le hue rotate fait changer de couleur (on exprime la rotation de couleur en degré) */
+}
+
+@keyframes anim {
+    to {
+        bottom: -50px;
+        left: var(--left);
+        opacity: 1;
+        /* filter: hue-rotate(360deg); */
+    }
+}
+.line{
+    position: absolute;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
